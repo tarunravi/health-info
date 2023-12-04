@@ -53,7 +53,7 @@ export default function Home() {
 
   const generatePatient = async () => {
     try {
-      const response = await fetch("/api/generatePatient");
+      const response = await fetch("https://api-polbq3pvdq-ue.a.run.app/api/generatePatient");
       const data = await response.json();
       console.log("Patient data:", data);
       setPatientData(data);
@@ -65,7 +65,7 @@ export default function Home() {
 
   const predictHeartDisease = async () => {
     try {
-      const response = await fetch("/api/heartDisease", {
+      const response = await fetch("https://api-polbq3pvdq-ue.a.run.app/api/heartDisease", {
         method: "POST",
         body: JSON.stringify(patientData),
         headers: {
